@@ -334,7 +334,7 @@ internal extension BottomSheetView {
             )
             // Design of the close button
             .resizable()
-            .renderingMode(.template)
+            .renderingMode(.original)
             .foregroundColor(.tertiaryLabel)
             .scaledToFit()
             .frame(
@@ -369,6 +369,13 @@ internal extension BottomSheetView {
             // Use custom BottomSheet background
             if let backgroundView = self.configuration.backgroundView {
                 backgroundView
+                    .cornerRadius(
+                        25,
+                        corners: self.isIPadFloatingOrMac ? .allCorners : [
+                            .topRight,
+                            .topLeft
+                        ]
+                    )
             } else {
                 // Default BottomSheet background
                 VisualEffectView(visualEffect: .system)
@@ -376,7 +383,7 @@ internal extension BottomSheetView {
                 // On iPhone and iPad not floating only to the top corners,
                 // on iPad floating and Mac to all corners
                     .cornerRadius(
-                        10,
+                        25,
                         corners: self.isIPadFloatingOrMac ? .allCorners : [
                             .topRight,
                             .topLeft

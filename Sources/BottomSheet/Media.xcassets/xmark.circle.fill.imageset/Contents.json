@@ -1,18 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "xmark.circle.fill@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "xmark.circle.fill@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "Frame 1769.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {
